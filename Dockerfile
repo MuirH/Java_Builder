@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y && \
-	apt-get install sudo apt-transport-https ca-certificates wget dirmngr gnupg software-properties-common \
+	apt-get install -qy sudo apt-transport-https ca-certificates wget dirmngr gnupg software-properties-common \
 	bash-completion asciidoctor -y && \
 	useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod && \
 	echo "PS1='\[\e]0;\u \w\a\]\[\033[01;32m\]\u\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] \\\$ '" >> /home/gitpod/.bashrc && \
