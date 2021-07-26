@@ -25,6 +25,7 @@ RUN apt-get update && apt-get upgrade -y && \
 	echo 'export export M2_HOME=/usr/share/maven/' > /etc/profile.d/maven.sh && \
 	echo 'export MAVEN_HOME=/usr/share/maven/' >> /etc/profile.d/maven.sh && \
 	echo 'export PATH=${M2_HOME}/bin:${PATH}' >> /etc/profile.d/maven.sh && \
+	chmod +x /etc/profile.d/*.sh && \
 	rm -rf /var/lib/apt/lists/* /tmp/*
 
 
