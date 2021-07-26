@@ -1,0 +1,1 @@
+切换Java版本：'sudo update-alternatives --config java'
