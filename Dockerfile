@@ -18,12 +18,12 @@ RUN apt-get update && apt-get upgrade -y && \
 	apt-get clean && apt-get autoremove && \
 	wget https://downloads.gradle-dn.com/distributions/gradle-6.9-bin.zip -P /tmp && \
     unzip -d /usr/share/tools /tmp/gradle-6.9-bin.zip && ln -s /usr/share/tools/gradle-6.9/ /usr/share/gradle && \
-	echo 'export GRADLE_HOME=/usr/share/gradle/' > /etc/profile.d/gradle.sh && \
+	echo 'export GRADLE_HOME=/usr/share/gradle' > /etc/profile.d/gradle.sh && \
 	echo 'export PATH=${GRADLE_HOME}/bin:${PATH}' >> /etc/profile.d/gradle.sh && \
 	wget https://apache.website-solution.net/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip -P /tmp && \
 	unzip -d /usr/share/tools /tmp/apache-maven-3.8.1-bin.zip && ln -s /usr/share/tools/apache-maven-3.8.1/ /usr/share/maven && \
-	echo 'export export M2_HOME=/usr/share/maven/' > /etc/profile.d/maven.sh && \
-	echo 'export MAVEN_HOME=/usr/share/maven/' >> /etc/profile.d/maven.sh && \
+	echo 'export export M2_HOME=/usr/share/maven' > /etc/profile.d/maven.sh && \
+	echo 'export MAVEN_HOME=/usr/share/maven' >> /etc/profile.d/maven.sh && \
 	echo 'export PATH=${M2_HOME}/bin:${PATH}' >> /etc/profile.d/maven.sh && \
 	chmod +x /etc/profile.d/*.sh && \
 	rm -rf /var/lib/apt/lists/* /tmp/*
