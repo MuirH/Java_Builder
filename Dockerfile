@@ -16,8 +16,8 @@ RUN apt-get update && apt-get upgrade -y && \
 	htop vim jq less locales man-db nano software-properties-common time multitail lsof \
 	ssl-cert fish zsh adoptopenjdk-16-hotspot adoptopenjdk-8-hotspot adoptopenjdk-11-hotspot && \
 	apt-get clean && apt-get autoremove && \
-	wget https://downloads.gradle-dn.com/distributions/gradle-7.1.1-bin.zip -P /tmp && \
-    unzip -d /usr/share/tools /tmp/gradle-7.1.1-bin.zip && ln -s /usr/share/tools/gradle-7.1.1/ /usr/share/gradle && \
+	wget https://downloads.gradle-dn.com/distributions/gradle-6.9-bin.zip -P /tmp && \
+    unzip -d /usr/share/tools /tmp/gradle-6.9-bin.zip && ln -s /usr/share/tools/gradle-6.9/ /usr/share/gradle && \
 	echo 'export GRADLE_HOME=/usr/share/gradle/' > /etc/profile.d/gradle.sh && \
 	echo 'export PATH=${GRADLE_HOME}/bin:${PATH}' >> /etc/profile.d/gradle.sh && \
 	wget https://apache.website-solution.net/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip -P /tmp && \
